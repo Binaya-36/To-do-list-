@@ -1,5 +1,11 @@
 #create an empty list to store the tasks and their status
 todo_list= []
+#function to add task to the todo list
+def add_task():
+    task=input("Enter the task:")
+    todo_list.append({"Task":task,"Status":"Pending"})
+    print("Task added succesfully")
+
 
 # function to display the menu
 def menu():
