@@ -14,8 +14,17 @@ def view_task():
             else:
                 for index,task in enumerate(todo_list,start=1):
                   print(f"{index:}.{task['Task']}-{task['Status']}")
-        
-        
+
+#function to remove the task
+def remove_task():
+    if len(todo_list)==0:
+        print("List is empty")
+    else:
+        value=int(input("Enter the task number you want to remove:"))-1
+        if 0<= value <len(todo_list):
+         removed_task=todo_list.pop(value)
+        else:
+            print("The number you wrote isn't available")            
 
 # function to display the menu
 def menu():
@@ -26,6 +35,8 @@ def menu():
         print("3.Remove the tasks")
         print("4.Mark a task as completed")
         print("5.Exit")
+
+        
 
         choice=input("What you want to do?\n")
         if(choice=="1"):
