@@ -31,13 +31,16 @@ def mark_done():
         if len(todo_list)==0:
           print("List is empty")
         else:
-            value=int(input("Enter the work you want to mark as completed:"))-1
+            value=int(input("Enter the work you want to mark as completed:\n"))-1
         if 0<= value <len(todo_list):
             todo_list[value]['Status']='Completed'
             print(f"{todo_list[value]['Task']} is marked as completed")
         else:
             print("The number you wrote isn't available")
 
+def exit_button():
+    print("Byee byee")
+    exit()
 
 # function to display the menu
 def menu():
