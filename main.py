@@ -24,7 +24,20 @@ def remove_task():
         if 0<= value <len(todo_list):
          removed_task=todo_list.pop(value)
         else:
-            print("The number you wrote isn't available")            
+            print("The number you wrote isn't available")   
+
+#function to mark task as completed
+def mark_done():
+        if len(todo_list)==0:
+          print("List is empty")
+        else:
+            value=int(input("Enter the work you want to mark as completed:"))-1
+        if 0<= value <len(todo_list):
+            todo_list[value]['Status']='Completed'
+            print(f"{todo_list[value]['Task']} is marked as completed")
+        else:
+            print("The number you wrote isn't available")
+
 
 # function to display the menu
 def menu():
